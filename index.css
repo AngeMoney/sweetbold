@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+#title {
+    background-color: #f7f7f7;
+    color: #000000;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#title .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #21aa9f;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#title .btn:hover {
+    background-color: #21aa9f;
+}
+
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.features-container, .pricing-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature, .paiement-section {
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    text-align: center;
+}
+
+.paiement-section.orange {
+    background-color: #FF8200;
+}
+
+.paiement-section.green {
+    background-color: #009a44;
+}
+
+.gold {
+    background-color: #e5e4e2;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#vendeurs {
+    display: flex;
+    flex-direction: column;
+}
+
+#seller-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.seller-image {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 16px;
+}
+
+.seller {
+    flex: 1;
+}
+
+.centered{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.centered > * {
+    margin: 10px;
+}
+
+.notification{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
