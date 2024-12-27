@@ -149,8 +149,10 @@ footer {
 .seller-image {
     width: 100%;
     object-fit: cover;
-    height: 300px;
-    border-radius: 16px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: block;
 }
 
 .seller {
