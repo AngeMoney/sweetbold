@@ -89,17 +89,7 @@ section h2 {
     text-align: center;
 }
 
-.paiement-section.orange {
-    background-color: #FF8200;
-}
 
-.paiement-section.green {
-    background-color: #009a44;
-}
-
-.gold {
-    background-color: #e5e4e2;
-}
 
 label {
     display: block;
@@ -134,16 +124,19 @@ footer {
     padding: 20px 0;
 }
 
-#vendeurs {
-    display: flex;
-    flex-direction: column;
-}
 
 #seller-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     flex-direction: row;
     gap: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .seller-image {
@@ -174,4 +167,11 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .seller-image {
+        height: auto; /* Let the height adjust dynamically */
+        border-radius: 10px; /* Reduce the border-radius for smaller screens */
+    }
 }
