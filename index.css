@@ -149,7 +149,8 @@ footer {
 .seller-image {
     width: 100%;
     object-fit: cover;
-    height: 500px;
+    height: auto;
+    margin: auto;
     border-radius: 20px;
     display: block;
 }
