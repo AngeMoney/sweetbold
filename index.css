@@ -1,177 +1,183 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
 header {
-    background-color: #000000;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 header nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 main {
-    padding: 20px;
+  padding: 20px;
+}
+
+/* Main Section */
+main {
+  padding: 20px;
+}
+
+/* Service Container */
+#service-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-between; /* Distribute space between items */
+  gap: 20px; /* Space between service items */
+  padding: 20px;
+  background-color: #e9e9e9;
+  border-radius: 8px;
+}
+
+/* Each Service Item */
+.service-item {
+  background-color: black;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 20px);  /* Flex property to distribute items */
+  min-width: 300px;  /* Minimum width for responsiveness */
+  transition: transform 0.3s ease;
+  justify-content: center;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Overlay Text */
+.overlay-text {
+  position: relative;
+  width: 90%;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: black;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.overlay-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.overlay-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered > * {
+  margin: 10px;
+}
+
+.paragraph {
+  align-content: center;
+  justify-items: legacy;
+  border-spacing: 0ch;
+  color: #000000;
+  margin: 20px;
 }
 
 #title {
-    background-color: #f7f7f7;
-    color: #000000;
-    padding: 50px 20px;
-    text-align: center;
+  background-color: #f7f7f7;
+  color: #646464;
+  padding: 50px 20px;
+  text-align: center;
 }
 
 #title .btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #21aa9f;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 20px;
-    border-radius: 5px;
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #21aa9f;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
 #title .btn:hover {
-    background-color: #21aa9f;
+  background-color: #21aa9f;
 }
 
-section {
-    margin: 40px 0;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Media Query for Mobile and Small Devices */
+@media screen and (max-width: 768px) {
+  #service-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .service-item {
+    width: 100%; /* Make each item full-width on smaller screens */
+    margin-bottom: 20px; /* Add space between items */
+  }
+
+  .overlay-text {
+    width: 80%; /* Adjust overlay text width */
+    padding: 15px;
+  }
 }
 
-section h2 {
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
+/* Media Query for Extra Small Devices */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem; /* Adjust header size */
+  }
 
-.features-container, .pricing-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+  .overlay-text h1 {
+    font-size: 1.5rem; /* Adjust heading size in overlay text */
+  }
 
-.feature, .paiement-section {
-    background-color: #ffffff;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    flex: 1 1 30%;
-    text-align: center;
-}
-
-
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-
-#seller-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.seller-image {
-    width: 100%;
-    object-fit: cover;
-    height: auto;
-    margin: auto;
-    border-radius: 20px;
-    display: block;
-}
-
-.seller {
-    flex: 1;
-}
-
-.centered{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.centered > * {
-    margin: 10px;
-}
-
-.notification{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .seller-image {
-        height: auto; /* Let the height adjust dynamically */
-        border-radius: 10px; /* Reduce the border-radius for smaller screens */
-    }
+  .overlay-text p {
+    font-size: 0.9rem; /* Adjust paragraph size in overlay text */
+  }
 }
