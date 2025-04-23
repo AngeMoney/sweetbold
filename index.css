@@ -129,8 +129,8 @@ footer {
 #vendeurs {
   display: flex;
   flex-direction: column;
-  align-items:center;
-  padding: 60px;
+  align-items: center;
+  padding: 100px 20px;
 }
 
 #seller-container {
@@ -198,6 +198,49 @@ footer {
 
   .seller-image {
     height: 200px;
+  }
+
+  /* Adjust the grid layout for smaller screens */
+  #seller-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  header {
+    padding: 15px 0;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  #title {
+    padding: 20px 10px;
+  }
+
+  #vendeurs {
+    padding: 50px 20px;
+  }
+
+  .seller-image {
+    height: 180px;
+  }
+
+  /* Adjust the layout for very small screens */
+  #seller-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .paragraph {
+    margin: 5px;
+    padding: 0 5px;
   }
 }
 
