@@ -1,6 +1,7 @@
 body { 
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #000000; /* black background */
+  color: #ffffff; /* default text color (can be overridden in cards) */
   margin: 0;
   padding: 0;
 }
@@ -40,10 +41,15 @@ main {
 }
 
 #title {
-  background-color: #f7f7f7;
-  color: black;
-  padding: 50px 20px;
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  color: #333333;
   text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 #title .btn {
@@ -150,6 +156,13 @@ footer {
 
 .seller {
   flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333333;
+  text-align: center;
 }
 
 .centered {
@@ -245,6 +258,6 @@ footer {
 }
 
 .tight-spacing {
-  margin-bottom: 15px;
-  line-height: 0.1;
+  margin-bottom: 10px;
+  line-height: 1;
 }
